@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Мой блокнот</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="sys/todolist.css">
+	<link rel="stylesheet" href="sys/bootstrap.min.css">
+	<script src="sys/jquery.min.js"></script>
+	<script src="sys/popper.min.js"></script>
+	<script src="sys/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<nav id="mainNavBar" class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+		<div class="container">
+			<h3 class="navbar-brand"> 
+				<a style="color: white" href="main.html">
+					Блокнот
+				</a>
+			</h3>
+			
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="nav navbar-nav mr-auto">
+					<li id="hoverDrop1" class="nav-item btn-group">
+						<form action="bookmarks.html">
+							<button type="submit" class="btn btn-dark">
+								Закладки
+							</button>
+						</form>
+						<button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+							<span class="sr-only">Toggle Dropdown</span>
+						</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="bookmarks.html">Ссылки</a>
+							<a class="dropdown-item" href="bookmarks.html">Фото</a>
+							<a class="dropdown-item" href="bookmarks.html">Видео</a>
+						</div>
+					</li>
+					<li id="hoverDrop2" class="nav-item btn-group">
+						<form action="#">
+							<button type="submit" class="btn btn-dark">
+								Заметки
+							</button>
+						</form>
+						<button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+							<span class="sr-only">Toggle Dropdown</span>
+						</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Последние</a>
+							<a class="dropdown-item" href="#">Важные</a>
+							<a class="dropdown-item" href="#">Все</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<form action="todolist.html">
+							<button type="submit" class="btn btn-dark">
+								Список дел
+							</button>
+						</form>
+					</li>		
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<a class="nav-link" href="#">
+						Войти
+					</a>
+				</ul>   
+			</div>
+		</div>
+	</nav> 
+
+	
+	<div id="main" class="container">
+		<ul id="toDoList">
+			<li>
+				<div class="d-flex justify-content-between align-items-center w-100">
+				  <h5>%Название дела 1%</h5>
+				  <a href="#" data-toggle="modal" data-target="#reminder">Напомнить</a>
+				</div>
+				<p>
+					Описание дела Описание дела Описание дела Описание дела
+				</p>
+				<hr class="mb-4">
+			</li>
+			<li>
+				<div class="d-flex justify-content-between align-items-center w-100">
+				  <h5>%Название дела 2%</h5>
+				  <a href="#" data-toggle="modal" data-target="#reminder">Напомнить</a>
+				</div>
+				<p>
+					Описание дела Описание дела Описание дела Описание дела
+				</p>
+				<hr class="mb-4">
+			</li>
+			<li>
+				<div class="d-flex justify-content-between align-items-center w-100">
+				  <h5>%Название дела 3%</h5>
+				  <a href="#" data-toggle="modal" data-target="#reminder">Напомнить</a>
+				</div>
+				<p> 
+					Описание дела Описание дела Описание дела Описание дела
+				</p>
+				<hr class="mb-4">
+			</li>
+			<!-- <li> -->
+				<!-- <iframe width="620" height="315" -->
+					<!-- src="https://www.youtube.com/embed/tgbNymZ7vqY"> -->
+				<!-- </iframe>  -->
+			<!-- </li> -->
+		</ul>
+		
+		<div class="modal fade" id="reminder" tabindex="-1" role="dialog" aria-labelledby="reminderTitle">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="reminderModalTitle">Напоминание</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					
+					<div class="modal-body">
+						<label for="email_input">Email</label>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">
+								<svg width="24" height="24" viewBox="0 0 24 24">
+									<path fill-opacity=".9" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10h5v-2h-5c-4.34 0-8-3.66-8-8s3.66-8 8-8 8 3.66 8 8v1.43c0 .79-.71 1.57-1.5 1.57s-1.5-.78-1.5-1.57V12c0-2.76-2.24-5-5-5s-5 2.24-5 5 2.24 5 5 5c1.38 0 2.64-.56 3.54-1.47.65.89 1.77 1.47 2.96 1.47 1.97 0 3.5-1.6 3.5-3.57V12c0-5.52-4.48-10-10-10zm0 13c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/><path fill="none" d="M0 0h24v24H0z"/>
+								</svg>
+								</span>
+							</div>
+							<input type="text" class="form-control" id="email_input" placeholder="name@email.com" required>
+						</div>
+					</div>
+				
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+						<button type="button" class="btn btn-primary">Отправить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Button trigger modal -->
+		<button id="triggerButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+			Добавить в список дел
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Добавление в список дел</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					
+					<div class="modal-body">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">
+								<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+									<path fill="#000000" d="M7,5H21V7H7V5M7,13V11H21V13H7M4,4.5A1.5,1.5 0 0,1 5.5,6A1.5,1.5 0 0,1 4,7.5A1.5,1.5 0 0,1 2.5,6A1.5,1.5 0 0,1 4,4.5M4,10.5A1.5,1.5 0 0,1 5.5,12A1.5,1.5 0 0,1 4,13.5A1.5,1.5 0 0,1 2.5,12A1.5,1.5 0 0,1 4,10.5M7,19V17H21V19H7M4,16.5A1.5,1.5 0 0,1 5.5,18A1.5,1.5 0 0,1 4,19.5A1.5,1.5 0 0,1 2.5,18A1.5,1.5 0 0,1 4,16.5Z" />
+								</svg>
+								</span>
+							</div>
+							<input type="text" class="form-control" placeholder="Название" required>
+						</div>
+						
+						<textarea class="form-control" placeholder="Описание" required></textarea>
+					</div>
+				
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+						<button type="button" class="btn btn-primary">Добавить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div>
+		</br></br></br>
+	</div>
+	
+	<footer>
+		<a href="https://pastebin.com/WV6fY4Ri"> Описание проекта </a> 
+	</footer>
+	
+</body>
+</html>

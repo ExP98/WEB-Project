@@ -1,0 +1,219 @@
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Мой блокнот</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="sys/bookmarks.css">
+	<link rel="stylesheet" href="sys/bootstrap.min.css">
+	<script src="sys/jquery.min.js"></script>
+	<script src="sys/popper.min.js"></script>
+	<script src="sys/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<nav id="mainNavBar" class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+		<div class="container">
+			<h3 class="navbar-brand"> 
+				<a style="color: white" href="main.html">
+					Блокнот
+				</a>
+			</h3>
+			
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="nav navbar-nav mr-auto">
+					<li id="hoverDrop1" class="nav-item btn-group">
+						<form action="bookmarks.html">
+							<button type="submit" class="btn btn-dark">
+								Закладки
+							</button>
+						</form>
+						<button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+							<span class="sr-only">Toggle Dropdown</span>
+						</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#Links">Ссылки</a>
+							<a class="dropdown-item" href="#Photos">Фото</a>
+							<a class="dropdown-item" href="#Video_Links">Видео</a>
+						</div>
+					</li>
+					<li id="hoverDrop2" class="nav-item btn-group">
+						<form action="#">
+							<button type="submit" class="btn btn-dark">
+								Заметки
+							</button>
+						</form>
+						<button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+							<span class="sr-only">Toggle Dropdown</span>
+						</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Последние</a>
+							<a class="dropdown-item" href="#">Важные</a>
+							<a class="dropdown-item" href="#">Все</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<form action="todolist.html">
+							<button type="submit" class="btn btn-dark">
+								Список дел
+							</button>
+						</form>
+					</li>		
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<a class="nav-link" href="#">
+						Войти
+					</a>
+				</ul>   
+			</div>
+		</div>
+	</nav> 
+
+	
+	<div id="main" class="container">
+		<div id="Links">
+			<h3 class="mb-4"> Ссылки: </h4>
+			<ul id="linksList">
+				<li>
+					<div class="d-flex justify-content-between align-items-center w-100">
+					  <h5>Название ссылки 1</h5>
+					</div>
+					<p>
+						СсылкаСсылкаСсылкаСсылка
+					</p>
+					<hr class="mb-4">
+				</li>
+				<li>
+					<div class="d-flex justify-content-between align-items-center w-100">
+					  <h5>Название ссылки 2</h5>
+					</div>
+					<p>
+						Ссылка СсылкааааАаа Ссылка Ссылка
+					</p>
+					<hr class="mb-4">
+				</li>
+				<li>
+					<div class="d-flex justify-content-between align-items-center w-100">
+					  <h5>Название ссылки 3</h5>
+					</div>
+					<p>
+						Очень длинная ссылка
+					</p>
+					<hr class="mb-4">
+				</li>
+			</ul>
+		</div>
+		
+		<div id="Photos">
+			<h3 class="mb-4"> Фото: </h4>
+			<ul id="photosList">
+				<li>
+					<div class="d-flex justify-content-between align-items-center w-100">
+					  <h5>Мое фото 1</h5>
+					</div>
+					<p>
+						Фото
+					</p>
+					<hr class="mb-4">
+				</li>
+				<li>
+					<div class="d-flex justify-content-between align-items-center w-100">
+					  <h5>Мое фото 2</h5>
+					</div>
+					<p>
+						Фото
+					</p>
+					<hr class="mb-4">
+				</li>
+			</ul>
+		</div>
+		
+		<div id="Video_Links">
+			<h3 class="mb-4"> Ссылки на видео из YouTube: </h4>
+			<ul id="videoLinks">
+				<li>
+					<h5>Мое видео 1</h5>
+					<div class="mb-2">Ссылка на видео</div>
+					<div class="mb-3 text-alight-center">
+						<a data-toggle="collapse" href="#" data-target="#collapseOne11">
+							Посмотреть видео
+						</a>
+						<small class="text-muted"> (Нажмите для выбора)</small>
+						<div id="collapseOne11" class="collapse" aria-labelledby="headingOne">
+							<iframe width="620" height="315"
+								src="https://www.youtube.com/embed/tgbNymZ7vqY">
+							</iframe> 
+						</div>
+					</div>
+					<hr class="mb-4">
+				</li>
+				<li>
+					<div class="d-flex justify-content-between align-items-center w-100">
+					  <h5>Мое видео 2</h5>
+					</div>
+					<p>
+						Ссылка на видео
+					</p>
+					<hr class="mb-4">
+				</li>
+			</ul>
+		</div>
+	
+		
+		
+		<!-- Button trigger modal -->
+		<button id="triggerButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+			Добавить в список дел
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Добавление в список дел</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					
+					<div class="modal-body">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">
+								<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+									<path fill="#000000" d="M7,5H21V7H7V5M7,13V11H21V13H7M4,4.5A1.5,1.5 0 0,1 5.5,6A1.5,1.5 0 0,1 4,7.5A1.5,1.5 0 0,1 2.5,6A1.5,1.5 0 0,1 4,4.5M4,10.5A1.5,1.5 0 0,1 5.5,12A1.5,1.5 0 0,1 4,13.5A1.5,1.5 0 0,1 2.5,12A1.5,1.5 0 0,1 4,10.5M7,19V17H21V19H7M4,16.5A1.5,1.5 0 0,1 5.5,18A1.5,1.5 0 0,1 4,19.5A1.5,1.5 0 0,1 2.5,18A1.5,1.5 0 0,1 4,16.5Z" />
+								</svg>
+								</span>
+							</div>
+							<input type="text" class="form-control" placeholder="Название" required>
+						</div>
+						
+						<textarea class="form-control" placeholder="Описание" required></textarea>
+					</div>
+				
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+						<button type="button" class="btn btn-primary">Добавить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div>
+		</br></br></br>
+	</div>
+	
+	<footer>
+		<a href="https://pastebin.com/WV6fY4Ri"> Описание проекта </a> 
+	</footer>
+	
+</body>
+</html>

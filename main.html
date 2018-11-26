@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Мой блокнот</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="sys/main.css">
+	<link rel="stylesheet" href="sys/bootstrap.min.css">
+	<script src="sys/jquery.min.js"></script>
+	<script src="sys/popper.min.js"></script>
+	<script src="sys/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<nav id="mainNavBar" class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+		<div class="container">
+			<h3 class="navbar-brand"> 
+				<a style="color: white" href="main.html">
+					Блокнот
+				</a>
+			</h3>
+			
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="nav navbar-nav mr-auto">
+					<li id="hoverDrop1" class="nav-item btn-group">
+						<form action="bookmarks.html">
+							<button type="submit" class="btn btn-dark">
+								Закладки
+							</button>
+						</form>
+						<button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+							<span class="sr-only">Toggle Dropdown</span>
+						</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="bookmarks.html">Ссылки</a>
+							<a class="dropdown-item" href="bookmarks.html">Фото</a>
+							<a class="dropdown-item" href="bookmarks.html">Видео</a>
+						</div>
+					</li>
+					<li id="hoverDrop2" class="nav-item btn-group">
+						<form action="#">
+							<button type="submit" class="btn btn-dark">
+								Заметки
+							</button>
+						</form>
+						<button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+							<span class="sr-only">Toggle Dropdown</span>
+						</button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Последние</a>
+							<a class="dropdown-item" href="#">Важные</a>
+							<a class="dropdown-item" href="#">Все</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<form action="todolist.html">
+							<button type="submit" class="btn btn-dark">
+								Список дел
+							</button>
+						</form>
+					</li>		
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<a class="nav-link" href="#">
+						Войти
+					</a>
+				</ul>   
+			</div>
+		</div>
+	</nav>
+
+	<div class="jumbotron jumbotron-fluid">
+	  <div class="container">
+		<h1 class="display-4">Мой блокнот</h1>
+		<p class="lead">Сайт создан в рамках учебной дисциплины "Технологии Интернет и WEB-программирования". 
+		Здесь вы можете оставлять свои заметки, заносить разные странички в закладки и не беспокоиться об их сохранности</p>
+	  </div>
+	</div>
+	
+	<div class = "center" style="text-align: center">
+	  <button class="btn btn-primary btn-lg w-50">Перейти к закладкам</button>
+	</div>
+	
+	<footer>
+		<a href="https://pastebin.com/WV6fY4Ri"> Описание проекта </a> 
+	</footer>
+	
+	
+</body>
+</html>
